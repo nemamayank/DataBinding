@@ -1,4 +1,4 @@
-package com.databinding;
+package com.example;
 
 import org.junit.Test;
 

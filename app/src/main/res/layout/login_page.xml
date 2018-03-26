@@ -9,8 +9,8 @@
             type="android.view.View.OnClickListener" />
 
         <variable
-            name="viewModel"
-            type="com.databinding.models.LoginViewModel" />
+            name="loginViewModel"
+            type="com.example.models.LoginViewModel" />
 
         <variable
             name="enableLoginButton"
@@ -53,10 +53,10 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/enter_your_name"
+                            app:onFocusChangeListener="@{loginViewModel}"
+                            android:text="@={loginViewModel.userNameValue}"
                             android:inputType="textCapWords"
-                            android:maxLength="30"
-                            android:text="@={viewModel.userNameValue}"
-                            app:onFocusChangeListener="@{viewModel}" />
+                            android:maxLength="30" />
                     </android.support.design.widget.TextInputLayout>
 
                     <android.support.design.widget.TextInputLayout
@@ -70,9 +70,9 @@
                             android:layout_height="wrap_content"
                             android:hint="@string/enter_your_password"
                             android:inputType="textCapWords"
-                            android:maxLength="30"
-                            android:text="@={viewModel.passwordValue}"
-                            app:onFocusChangeListener="@{viewModel}" />
+                            android:text="@={loginViewModel.passwordValue}"
+                            app:onFocusChangeListener="@{loginViewModel}"
+                            android:maxLength="30" />
                     </android.support.design.widget.TextInputLayout>
 
                     <android.support.v7.widget.AppCompatButton

@@ -1,11 +1,12 @@
-package com.databinding.models;
+package com.example.models;
 
 import android.content.Context;
 import android.text.TextUtils;
 import android.view.View;
 
-import com.databinding.R;
-import com.databinding.databinding.LoginBindings;
+import com.example.R;
+import com.example.databinding.LoginBindings;
+
 
 /**
  *   Model For Setting Values in XML
@@ -13,7 +14,7 @@ import com.databinding.databinding.LoginBindings;
 
 public class LoginViewModel extends BaseViewModel<LoginBindings> implements View.OnFocusChangeListener {
     private String userNameValue;
-    private String passwordValue;
+    private String userPasswordValue;
 
     public LoginViewModel(Context context, LoginBindings binding) {
         super(context, binding);
@@ -28,11 +29,11 @@ public class LoginViewModel extends BaseViewModel<LoginBindings> implements View
     }
 
     public void setPasswordValue(String passwordValue) {
-        this.passwordValue = passwordValue;
+        this.userPasswordValue = passwordValue;
     }
 
     public String getPasswordValue() {
-        return passwordValue;
+        return userPasswordValue;
     }
 
 
@@ -66,13 +67,13 @@ public class LoginViewModel extends BaseViewModel<LoginBindings> implements View
     }
 
     public boolean validatePassword() {
-        if (TextUtils.isEmpty(passwordValue)) {
+        if (TextUtils.isEmpty(userPasswordValue)) {
             getBinding().userPasswordField.setError(getContext().getString(R.string.error_register_empty_password));
-        } else if (passwordValue.trim().length() < 4) {
+        } else if (userPasswordValue.trim().length() < 4) {
             getBinding().userPasswordField.setError(getContext().getString(R.string.error_register_invalid_password));
         } else {
             getBinding().userPasswordField.setError(null);
-            setPasswordValue(passwordValue.trim());
+            setPasswordValue(userPasswordValue  .trim());
             return true;
         }
         return false;
