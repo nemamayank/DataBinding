@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mBinding.setHandler(this);
         mBinding.setEnableLoginButton(true);
 
-        // Setting the values of bindings via model
+        // Setting the values of bindings via model class
         mBinding.setViewModel(new LoginViewModel(this, mBinding));
     }
 
