@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 
 import com.example.R;
@@ -26,9 +28,44 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private void initializeBindings() {
         mBinding.setHandler(this);
         mBinding.setEnableLoginButton(true);
+        mBinding.setEnableResetButton(false);
 
         // Setting the values of bindings via model class
         mBinding.setLoginViewModel(new LoginViewModel(this, mBinding));
+
+        mBinding.userNameField.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int start, int before, int count) {
+                if (start >= 4 && mBinding.userPasswordField.length() >= 4) {
+                    mBinding.setEnableResetButton(true);
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+            }
+        });
+
+        mBinding.userPasswordField.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int start, int before, int count) {
+                if (start >= 4 && mBinding.userNameField.length() >= 4) {
+                    mBinding.setEnableResetButton(true);
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+            }
+        });
     }
 
     @Override
@@ -38,8 +75,19 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 if (mBinding.getLoginViewModel().validateUserName() && mBinding.getLoginViewModel().validatePassword()) {
                     // Proceed To login
                     startActivity(new Intent(this, LoginSuccessActivity.class));
+                    disableResetButton();
                 }
                 break;
+            case R.id.buttonReset:
+                // Reset fields & disable
+                disableResetButton();
+                break;
         }
+    }
+
+    private void disableResetButton() {
+        mBinding.setEnableResetButton(false);
+        mBinding.userPasswordField.setText(null);
+        mBinding.userNameField.setText(null);
     }
 }

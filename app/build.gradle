@@ -29,7 +29,7 @@ android {
         exclude 'META-INF/NOTICE'
         exclude 'META-INF/NOTICE.txt'
     }
-    buildToolsVersion '23.0.2'
+    buildToolsVersion '26.0.2'
 }
 
 dependencies {

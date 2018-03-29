@@ -11,4 +11,6 @@
     <string name="enter_your_password">Enter Your Password</string>
     <string name="enter_your_name">Enter Your Name</string>
     <string name="successfully_logged_in">Successfully Logged-In</string>
+    <string name="reset">Reset</string>
+    <string name="empty">""</string>
 </resources>

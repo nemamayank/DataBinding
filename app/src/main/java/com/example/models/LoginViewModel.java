@@ -9,7 +9,7 @@ import com.example.databinding.LoginBindings;
 
 
 /**
- *   Model For Setting Values in XML
+ * Model For Setting Values in XML
  */
 
 public class LoginViewModel extends BaseViewModel<LoginBindings> implements View.OnFocusChangeListener {
@@ -35,7 +35,6 @@ public class LoginViewModel extends BaseViewModel<LoginBindings> implements View
     public String getPasswordValue() {
         return userPasswordValue;
     }
-
 
     @Override
     public void onFocusChange(View view, boolean hasFocus) {
@@ -73,7 +72,7 @@ public class LoginViewModel extends BaseViewModel<LoginBindings> implements View
             getBinding().userPasswordField.setError(getContext().getString(R.string.error_register_invalid_password));
         } else {
             getBinding().userPasswordField.setError(null);
-            setPasswordValue(userPasswordValue  .trim());
+            setPasswordValue(userPasswordValue.trim());
             return true;
         }
         return false;

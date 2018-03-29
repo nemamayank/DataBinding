@@ -17,6 +17,9 @@ class BaseViewModel<B extends ViewDataBinding> extends BaseObservable {
         this.binding = binding;
     }
 
+    BaseViewModel() {
+    }
+
     B getBinding() {
         return binding;
     }
