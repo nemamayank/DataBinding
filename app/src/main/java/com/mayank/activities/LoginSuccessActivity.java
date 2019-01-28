@@ -1,9 +1,9 @@
-package com.example.activities;
+package com.mayank.activities;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
-import com.example.R;
+import com.mayank.R;
 
 /**
  * Logged-In Successfully Screen

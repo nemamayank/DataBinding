@@ -1,4 +1,4 @@
-package com.example.activities;
+package com.mayank.activities;
 
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
@@ -8,9 +8,9 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
 
-import com.example.R;
-import com.example.databinding.LoginBindings;
-import com.example.models.LoginViewModel;
+import com.mayank.R;
+import com.mayank.databinding.LoginBindings;
+import com.mayank.models.LoginViewModel;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
     private LoginBindings mBinding;

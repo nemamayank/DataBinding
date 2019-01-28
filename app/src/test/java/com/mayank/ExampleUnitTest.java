@@ -1,4 +1,4 @@
-package com.example;
+package com.mayank;
 
 import org.junit.Test;
 

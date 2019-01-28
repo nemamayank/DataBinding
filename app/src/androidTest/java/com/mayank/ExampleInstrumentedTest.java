@@ -1,4 +1,4 @@
-package com.example;
+package com.mayank;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

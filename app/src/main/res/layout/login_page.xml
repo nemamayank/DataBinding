@@ -10,7 +10,7 @@
 
         <variable
             name="loginViewModel"
-            type="com.example.models.LoginViewModel" />
+            type="com.mayank.models.LoginViewModel" />
 
         <variable
             name="enableLoginButton"

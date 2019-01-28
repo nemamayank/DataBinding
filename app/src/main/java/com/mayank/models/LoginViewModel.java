@@ -1,11 +1,11 @@
-package com.example.models;
+package com.mayank.models;
 
 import android.content.Context;
 import android.text.TextUtils;
 import android.view.View;
 
-import com.example.R;
-import com.example.databinding.LoginBindings;
+import com.mayank.R;
+import com.mayank.databinding.LoginBindings;
 
 
 /**

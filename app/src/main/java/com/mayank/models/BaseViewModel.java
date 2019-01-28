@@ -1,4 +1,4 @@
-package com.example.models;
+package com.mayank.models;
 
 import android.content.Context;
 import android.databinding.BaseObservable;
