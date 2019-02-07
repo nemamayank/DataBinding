@@ -5,7 +5,7 @@ Data Binding Library is a support library that enables you to bind UI elements i
 - Its exclude your boilerplate id's in your project which beautifies your project in a simple and clean way.
 To start using data binding on your android studio:
 - Download the library from the Support Repository in the Android SDK manager.
-- Configure your app to use data binding, add the dataBinding element to your build.gradle file in the app module, as shown in the    following example:
+- Configure your app to use data binding, add the dataBinding element to your build.gradle file in the app module, as shown below:
 
 ```
 // enable data binding for app here
