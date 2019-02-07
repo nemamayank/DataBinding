@@ -1,4 +1,5 @@
 **DataBinding**
+
 Data Binding Library is a support library that enables you to bind UI elements in your layouts to data sources in your app using a declarative style rather than programmatically.
 - Helps you to understand the binding of data through XML in your projects
 - Its exclude your boilerplate id's in your project which beautifies your project in a simple and clean way.
