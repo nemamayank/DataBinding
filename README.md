@@ -8,7 +8,7 @@ To start using data binding on your android studio:
 - Configure your app to use data binding, add the dataBinding element to your build.gradle file in the app module, as shown below:
 
 ```
-// enable data binding for app here
+// Enable data binding in the app using below code in gradle
 android {
     ...
     dataBinding {
